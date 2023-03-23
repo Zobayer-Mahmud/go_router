@@ -6,4 +6,5 @@ class AppConst {
   static String SECOND_PAGE_ROUTE = '/second';
   static String THIRD_PAGE_ROUTE = '/third';
   static String FOURTH_PAGE_ROUTE = '/fourth';
+   static String VIDEO_PLAY_SCREEN = '/video_play_screen';
 }

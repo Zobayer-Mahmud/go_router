@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router_practice/provider/first_screen_provider.dart';
 import 'package:go_router_practice/provider/home_provider.dart';
 
 import 'package:go_router_practice/utils/routing.dart';
@@ -7,6 +8,7 @@ import 'package:provider/provider.dart';
 void main() {
   runApp(MultiProvider(providers: [
     ChangeNotifierProvider(create: (context) => HomeProvider()),
+    ChangeNotifierProvider(create: (context) => FirstScreenProvider()),
   ], child: const MyApp()));
 }
 
@@ -22,7 +24,6 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       debugShowCheckedModeBanner: false,
-      // home: const HomeScreen(),
     );
   }
 }

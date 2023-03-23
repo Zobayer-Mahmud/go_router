@@ -4,6 +4,7 @@ import 'package:go_router_practice/screens/fourth_page.dart';
 import 'package:go_router_practice/screens/home_screen.dart';
 import 'package:go_router_practice/screens/second_page.dart';
 import 'package:go_router_practice/screens/third_page.dart';
+import 'package:go_router_practice/screens/video_play_screen.dart';
 import 'package:go_router_practice/utils/app_const.dart';
 
 class Routes {
@@ -27,6 +28,10 @@ class Routes {
     GoRoute(
       path: AppConst.FOURTH_PAGE_ROUTE,
       builder: (context, state) => const FourthScreen(),
+    ),
+     GoRoute(
+      path: AppConst.VIDEO_PLAY_SCREEN,
+      builder: (context, state) => const VideoPlayScreen(),
     ),
   ]);
 }
