@@ -1,5 +1,7 @@
+// ignore_for_file: non_constant_identifier_names
+
 class AppConst {
-  static String HOME_PAGE_ROUTE = '/  ';
+ static String HOME_PAGE_ROUTE = '/';
   static String FIRST_PAGE_ROUTE = '/first';
   static String SECOND_PAGE_ROUTE = '/second';
   static String THIRD_PAGE_ROUTE = '/third';
