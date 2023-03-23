@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:go_router_practice/screens/base_widget/custom_app_bar.dart';
 import 'package:go_router_practice/screens/base_widget/text_button.dart';
+import 'package:go_router_practice/utils/app_const.dart';
+import 'package:go_router_practice/utils/dimension.dart';
 
 class SecondScreen extends StatelessWidget {
   const SecondScreen({Key? key}) : super(key: key);
@@ -12,19 +14,26 @@ class SecondScreen extends StatelessWidget {
       appBar: CustomAppBar(
         label: "Second Screen",
       ),
-      body: Center(
+      body: Container(
+        padding: EdgeInsets.all(Dimensions.PAGE_DEFAULT_PADDING),
         child: Column(
           children: [
-            CustomTextButton(
-                title: "Previous",
-                onPressed: () {
-                  context.go("/first");
-                }),
-            CustomTextButton(
-                title: "Next",
-                onPressed: () {
-                  context.go("/third");
-                }),
+            Expanded(child: Container()),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                CustomTextButton(
+                    title: "Previous",
+                    onPressed: () {
+                      context.go(AppConst.FIRST_PAGE_ROUTE);
+                    }),
+                CustomTextButton(
+                    title: "Next",
+                    onPressed: () {
+                      context.go(AppConst.THIRD_PAGE_ROUTE);
+                    }),
+              ],
+            ),
           ],
         ),
       ),
